@@ -9,17 +9,17 @@
 </head>
 <body>
     <header>
-        <h1>Market List</h1>
+        <h1>INICIO</h1>
     </header>
     <main>
         <section class="form__section">
             <form id="formProds" action="">
               <label for="prod">Producto</label>
-                <input id="prod" name="prod" type="text">
+                <input required id="prod" name="prod" type="text">
               <label for="cant">Cantidad</label>
-                <input id="cant" name="cant" type="number">
+                <input required id="cant" name="cant" type="number">
                 <label for="cost">Costo por unidad</label>
-                <input id="cost" name="cost" type="number">
+                <input required id="cost" name="cost" type="number">
                 <button id="boton">Calcular TOTAL</button>
             </form>
             
@@ -28,8 +28,11 @@
 
         </section>
         <section id="priceFinal">
-            <button id="pFinal">Calcular</button>
+            <button id="calcButton">Calcular</button>
+         <div id="div__costoFinal"></div>
         </section>
+        
+
 
         <script src="./index.js"></script>
     </main>

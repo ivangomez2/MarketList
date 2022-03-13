@@ -4,6 +4,49 @@
 
 body{
     background-image: url("./img/market\ backg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;}
+
+@media (max-width:870px){
+    #section__productos{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr !important;
+    }
+
+}
+
+@media (max-width:650px){
+    #section__productos{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+}
+
+@media (max-width:439px){
+    #section__productos{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr !important;
+    }
+
+}
+
+
+    #section__productos{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+#section__productos img{
+    width: 200px;
+    display: flex;
+    margin: 0 auto;
+    
 }
 
 #formProds{
@@ -47,4 +90,17 @@ body{
 .div__prod li{
     list-style-type: none;
 
+}
+
+#div__costoFinal{
+    background-color: rgb(232, 200, 152);
+    border: solid 1px black;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#calcButton{
+    border-radius: 5px;
+    padding: 5px;
+    
 }

@@ -9,9 +9,10 @@ let boton = document.getElementById("boton")
 const productos = [{name:"", cant:"",cost:""}]
 let section__prod = document.createElement("div")
 
-let cfinalButton = document.getElementById("pFinal")
+let cfinalButton = document.getElementById("calcButton")
 cfinalButton.addEventListener("click",buttonPFinal)
 
+let divCostoFinal = document.getElementById("div__costoFinal")
 
 const costos = []
 let precioFinal = 0
@@ -23,10 +24,9 @@ const domEl = ()=>{
 
 
 function buttonPFinal() {
-  let agregarCosto = document.createElement("div")
-  agregarCosto.innerHTML =`<p>Costo total : </p>
-                          <li>$ ${precioFinal}</li>`
-  console.log(priceFinal.appendChild(agregarCosto))
+  let agregarCosto = divCostoFinal
+  agregarCosto.innerHTML =`<p>Costo total: $${precioFinal}</p>`                          
+  priceFinal.appendChild(agregarCosto)
 }
 
 
@@ -42,8 +42,10 @@ function FormuData(el){
     let section__prod = document.createElement("div")
     section__prod.className = "div__prod"
     let totalPrice = productos.cost * productos.cant
-    section__prod.innerHTML = `<ul><li>Producto:${productos.name}</li><li>Cantidad:${productos.cant}</li><li>Precio Total:$${totalPrice}</li><ul>`
+    section__prod.innerHTML = `<img src="./img/carrito2.png"><ul><li>Producto:${productos.name}</li><li>Cantidad:${productos.cant}</li><li>Precio Total:$${totalPrice}</li><ul>`
     
+    
+
     /*calcular precio total*/
     costos.push(totalPrice)
     console.log(elemento.appendChild(section__prod))
