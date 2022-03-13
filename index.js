@@ -16,15 +16,23 @@ let divCostoFinal = document.getElementById("div__costoFinal")
 
 
 
+const prodsDelete = []
+let costosBorrados = 0
 
 const costos = []
 let precioFinal = 0
-
+console.log(costos)
 
 
 function buttonPFinal() {
   let agregarCosto = divCostoFinal
-  agregarCosto.innerHTML =`<p>Costo total: $${precioFinal}</p>`                          
+  //restamos elementos eliminados para que el valor final sea el correcto
+  costosBorrados = 0;
+  for (let i = 0; i < prodsDelete.length; i++) {
+    costosBorrados += prodsDelete[i]
+ }
+ //modificamos el dom con el valor correcto
+  agregarCosto.innerHTML =`<p>Costo total: $${precioFinal - costosBorrados}</p>`   
   priceFinal.appendChild(agregarCosto)
 }
 
@@ -51,9 +59,10 @@ function FormuData(el){
     section__prod.appendChild(eliminar)
 
     eliminar.addEventListener("click", (event) =>{
-     event.target.parentNode.remove()
+     let ver = event.target.parentNode.remove()
+    prodsDelete.push(totalPrice)
+    console.log(prodsDelete)
      
-   
     })
 
     /*calcular precio total*/
@@ -65,9 +74,12 @@ function FormuData(el){
     for (let i = 0; i < costos.length; i++) {
       precioFinal += costos[i]
    }
- }
 
-  console.log(costos)
+
+  }
+  
+  
+
 
 
 buttonPFinal()
