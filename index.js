@@ -1,20 +1,17 @@
 let elemento = document.getElementById("section__productos")
 let priceFinal = document.getElementById("priceFinal")
-
 let formProds = document.getElementById("formProds")
 formProds.addEventListener("submit",FormuData)
-
 let boton = document.getElementById("boton")
-
-const productos = [{name:"", cant:"",cost:""}]
 let section__prod = document.createElement("div")
-
 let cfinalButton = document.getElementById("calcButton")
 cfinalButton.addEventListener("click",buttonPFinal)
 
+
+
 let divCostoFinal = document.getElementById("div__costoFinal")
 
-
+const productos = [{name:"", cant:"",cost:""}]
 
 const prodsDelete = []
 let costosBorrados = 0

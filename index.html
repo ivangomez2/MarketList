@@ -9,9 +9,16 @@
 </head>
 <body>
     <header>
-        <h1>INICIO</h1>
+        
+        <nav class="nav__menu"><h1>Bienvenido</h1>
+        <ul class="nav__ul">
+            <li><a href="#"> About me</a></li>
+            <li><a href="#">Code.repo</a> </li>
+        </ul>
+        <img src="" alt="">
+        </nav>
     </header>
-    <main>
+    <main class="main__forms">
         <section class="form__section">
             <form id="formProds" action="">
               <label for="prod">Producto</label>
@@ -22,15 +29,15 @@
                 <input  id="cost" name="cost" type="number">
                 <button id="boton">Agregar Producto</button>
             </form>
-            
+            <section id="priceFinal">
+                <button id="calcButton">Calcular costo total</button>
+             <div id="div__costoFinal"></div>
+            </section>
         </section>
         <section id="section__productos">
-            
+          
         </section>
-        <section id="priceFinal">
-            <button id="calcButton">Calcular costo total</button>
-         <div id="div__costoFinal"></div>
-        </section>
+      
         
 
 

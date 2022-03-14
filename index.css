@@ -1,9 +1,10 @@
 *{
     font-weight: bolder;
+    font-family: monospace;
 }
 
 body{
-    background-image: url("./img/market\ backg.jpg");
+    background-image: url("./img/fondoBlue.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;}
@@ -34,6 +35,27 @@ body{
     }
 
 }
+.nav__menu{
+    display: flex;
+    color: rgb(225, 185, 86);
+}
+
+.nav__ul{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    list-style: none;
+   
+}
+.nav__ul a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+ .main__forms{
+ display: grid;
+ grid-template-columns: 1fr;
+}
 
 
     #section__productos{
@@ -43,7 +65,10 @@ body{
     }
 
 #section__productos img{
-    width: 200px;
+   
+    background-color: rgb(251, 252, 253);
+    border-radius: 10px;
+    width: 180px;
     display: flex;
     margin: 0 auto;
     
@@ -56,7 +81,7 @@ body{
     border: solid 1px;
     padding: 20px;
     border-radius: 5px;
-    background-color: wheat;
+    background-color: rgb(115, 193, 245);
 }
 
 .form__section{
@@ -69,7 +94,7 @@ body{
 .form__section input{
     margin-bottom: 10px;
    border-radius: 10px;
-   border-color: gray;
+   border-color: rgb(187, 187, 187);
 }
 
 #boton{
@@ -79,12 +104,26 @@ body{
 }
 
 .div__prod{
-    background-color: wheat;
+    background-color: rgb(255, 255, 255);
     border:black solid 1px;
     border-radius: 10px;
-    
-    color: black;
+    border: 3px solid;
+    color: rgb(0, 0, 0);
     margin-top: 15px;
+    
+}
+
+.div__prod ul{
+border: solid 2px;
+border-width: 2px;
+padding: 8px;
+}
+
+.div__prod button{
+    border-radius: 5px;
+    text-align: center;
+    display: grid;
+    margin: 0 auto;
 }
 
 .div__prod li{
