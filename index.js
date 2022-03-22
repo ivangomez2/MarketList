@@ -1,14 +1,22 @@
-let elemento = document.getElementById("section__productos")
-let priceFinalSection = document.getElementById("priceFinal")
-let formProds = document.getElementById("formProds")
-formProds.addEventListener("submit",FormuData)
-let boton = document.getElementById("boton")
-let section__prod = document.createElement("div")
-let cfinalButton = document.getElementById("calcButton")
-cfinalButton.addEventListener("click",buttonPFinal)
+                                      /*dom*/
+  let elemento = document.getElementById("section__productos")
+  let priceFinalSection = document.getElementById("priceFinal")
+  let formProds = document.getElementById("formProds")
+  formProds.addEventListener("submit",FormuData)
+  let boton = document.getElementById("boton")
+  let section__prod = document.createElement("div")
+  let cfinalButton = document.getElementById("calcButton")
+  cfinalButton.addEventListener("click",buttonPFinal)
+  let botonBuscar = document.getElementById("botonBuscar")
+  let inputBuscar = document.getElementById("inputBuscar")
+  let divCostoFinal = document.getElementById("div__costoFinal")
+  
 
-
-let divCostoFinal = document.getElementById("div__costoFinal")
+  const prodsDelete = []
+  let costosBorrados = 0
+  let productosAgregados = []
+  let costos = []
+  let precioFinal = 0
 
 
 class Productos {
@@ -18,20 +26,6 @@ class Productos {
     this.cost = cost;
   }
 }
-
-
-
-const prodsDelete = []
-let costosBorrados = 0
-let productosAgregados = []
-let costos = []
-let precioFinal = 0
-
-
-let botonBuscar = document.getElementById("botonBuscar")
-let inputBuscar = document.getElementById("inputBuscar")
-
-
 
 
 
@@ -53,33 +47,29 @@ function FormuData(el){
     el.preventDefault()
     let form = el.target
     
-
     const products = form.children[1].value;
     const quantity = form.cant.value;
     const cost = form.cost.value;
-   let prodNew = new Productos (products,quantity,cost)
-   productosAgregados = prodNew
+    let prodNew = new Productos (products,quantity,cost)
 
-   
+  
    let arrayNew = Object.keys(prodNew).map(function(key) {
-   return prodNew[key];
+   
+   return productosAgregados.push(prodNew[key])
     
+   });
    
-});
-   
-
+  console.log(productosAgregados)
 
    botonBuscar.addEventListener("click",res)
    
    function res(){
     let valor = inputBuscar.value
-    
-    let doc = document.getElementById("div__buscador")
-     let buscar = arrayNew.find(i=> i === valor )
+
+     let buscar = productosAgregados.filter(i=> i === valor )
      console.log("el producto existe = ", buscar)
    
-     let newEl = document.createElement("div")
-     newEl.innerHTML = `<li>${buscar}</li>`
+     
     
    }
 
