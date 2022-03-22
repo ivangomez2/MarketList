@@ -79,8 +79,18 @@ function FormuData(el) {
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        Swal.fire('Eliminado!', '', 'success')
+        
         let ver = event.target.parentNode.remove();
+        Toastify({
+          text: "Producto Eliminado",
+          style: {
+            background: "green",
+          },
+          offset: {
+            x: 10, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+            y: 530, // vertical axis - can be a number or a string indicating unity. eg: '2em'
+          },
+        }).showToast();
         console.log(ver);
         prodsDelete.push(totalPrice);
         console.log(prodsDelete);
