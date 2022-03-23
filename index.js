@@ -53,14 +53,32 @@ function FormuData(el) {
   let prodNew = new Productos(products, quantity, cost);
 
   let filtrado = prodNew.name;
-  console.log(filtrado);
   productosAgregados.push(filtrado);
-  console.log(productosAgregados);
-
+  
+  /* Crear cards con productos */
+ 
   let section__prod = document.createElement("div");
   section__prod.className = "card addCard";
 
   section__prod.innerHTML = `<img src="./img/carrito2.png"><ul><li>Producto: ${products} </li><li>Cantidad:${quantity}</li><li>Precio Total:$${totalPrice}</li></ul>`;
+
+
+ /* Crear una card que muestre el producto agregado reciente */
+
+ let containerProd = document.getElementById("div__mostrador")
+
+ containerProd.innerHTML = `<img src="./img/carrito2.png"><ul><li>Producto: ${products} </li><li>Cantidad:${quantity}</li><li>Precio Total:$${totalPrice}</li></ul><img class="addLogo" src="./img/ProdAdd.png">`
+ containerProd.className = "cardIzq"
+
+ 
+ let clickSucess  = document.getElementById("clickSucess")
+ 
+ var randomColor = Math.floor(Math.random()*16777215).toString(16);
+ 
+ clickSucess.style.backgroundColor = "#" + randomColor
+ clickSucess.style.color = "white"
+ clickSucess.innerText = "Agregado!"
+
 
   /*funcion para eliminar cada elemento de mi tabla*/
 
@@ -77,7 +95,7 @@ function FormuData(el) {
       confirmButtonText: 'Si',
       denyButtonText: `No`,
     }).then((result) => {
-      /* Read more about isConfirmed, isDenied below */
+     
       if (result.isConfirmed) {
         
         let ver = event.target.parentNode.remove();
@@ -87,8 +105,8 @@ function FormuData(el) {
             background: "green",
           },
           offset: {
-            x: 10, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-            y: 530, // vertical axis - can be a number or a string indicating unity. eg: '2em'
+            x: 10,
+            y: 530, 
           },
         }).showToast();
         console.log(ver);
@@ -125,13 +143,14 @@ function filtrado() {
 
 function deleteAll() {
   let DeleteAllBtn = document.createElement("button");
-  DeleteAllBtn.innerText = "borrar Todo";
+  DeleteAllBtn.className = "btn btn-secondary"
+  DeleteAllBtn.innerText = "Borrar Todo";
   priceFinalSection.appendChild(DeleteAllBtn);
   DeleteAllBtn.addEventListener("click", borrarTodo);
   function borrarTodo() { 
    
    
-    if (costos.length > 0) {
+    
       let divs = elemento.getElementsByClassName("card");
       let arra = (arrayNew.length = 0);
       console.log(arra);
@@ -141,11 +160,7 @@ function deleteAll() {
         costos = [];
         productosAgregados = [];
       }
-    } else {
-      costos = 0;
  
-      alert("No tienes productos agregados aún");
-    }
     divCostoFinal.innerHTML = `<p>Costo total: $${precioFinal}</p>`;
   }
 }

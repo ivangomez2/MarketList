@@ -10,31 +10,20 @@ body{
     background-attachment: fixed;}
 
 @media (max-width:870px){
-    #section__productos{
-        display: grid;
-        gap: 10px;
-        grid-template-columns: 1fr 1fr 1fr !important;
+    
     }
 
-}
 
 @media (max-width:650px){
-    #section__productos{
-        display: grid;
-        gap: 10px;
-        grid-template-columns: 1fr 1fr !important;
+   
     }
 
-}
+
 
 @media (max-width:439px){
-    #section__productos{
-        display: grid;
-        gap: 10px;
-        grid-template-columns: 1fr !important;
+   
     }
 
-}
 .nav__menu{
     display: flex;
     color: rgb(225, 185, 86);
@@ -54,9 +43,12 @@ body{
 
  .main__forms{
  display: grid;
- grid-template-columns: 1fr;
+ grid-template-columns: 1fr 1fr;
 }
 
+.addCard{
+    width: 200px;
+}
 
 .addCard ul{
     border-top: 1px solid;
@@ -65,8 +57,21 @@ body{
 
     #section__productos{
         display: grid;
-        gap: 10px;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 8px;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 100px;
+        
+    }
+    #div__mostrador{
+        border: solid 2px black;
+        height: 205px;
+        width: 350px;
+        margin-left: 30px;
+    }
+
+    .addLogo{
+       margin-top: 150px;
+       
     }
 
 #section__productos img{
@@ -85,7 +90,7 @@ body{
     text-align: center;
     border: solid 1px;
     padding: 20px;
-    border-radius: 5px;
+   
     background-color: rgb(115, 193, 245);
 }
 
@@ -102,13 +107,6 @@ body{
    border-color: rgb(187, 187, 187);
 }
 
-#boton{
-    padding: 5px;
-    background-color: black;
-    color: wheat;
-}
-
-
 
 #div__costoFinal{
     background-color: rgb(232, 200, 152);
@@ -117,11 +115,20 @@ body{
     border-radius: 5px;
 }
 
-#calcButton{
+.div__buscador input{
+    height: 30px;
     border-radius: 5px;
-    padding: 5px;
-    background-color: black;
-    color: wheat;
+    border-top: 0px;
+}
+.div__buscador button{
+    margin-left:-15px;
+    height: 30px;
+}
+
+#clickSucess{
+   padding: 5px;
+   margin-top: 13px;
+    
     
 }
 
@@ -131,3 +138,15 @@ body{
     
 }
 
+.cardIzq{
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+.cardIzq img{
+    width: 100px;
+    
+}
