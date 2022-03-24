@@ -71,19 +71,13 @@ function FormuData(el) {
  containerProd.className = "cardIzq"
 
  
- let clickSucess  = document.getElementById("clickSucess")
- 
- var randomColor = Math.floor(Math.random()*16777215).toString(16);
- 
- clickSucess.style.backgroundColor = "#" + randomColor
- clickSucess.style.color = "white"
- clickSucess.innerText = "Agregado!"
+
 
 
   /*funcion para eliminar cada elemento de mi tabla*/
 
   let eliminar = document.createElement("button");
-  eliminar.className = "btn btn-primary";
+  eliminar.className = "btn btn-secondary";
   eliminar.innerText = "Eliminar";
   section__prod.appendChild(eliminar);
 
