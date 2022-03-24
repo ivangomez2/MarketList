@@ -46,6 +46,7 @@
     color:#000000;
     font-weight: bolder;
     border: solid 2px rgb(0, 0, 0) !important;
+    border-bottom: none !important;
 }
 
 .addCard ul{
@@ -54,13 +55,17 @@
 
 .addCard img{
     border-radius: 0px !important;
-    border: 4px solid;
+    
     border-bottom: none;
     border-top: none;
     border-width: 3px;
     
 }
 
+.btn{
+   /*background-color: #474736 !important;*/
+   background-color: rgb(86, 153, 253) !important;
+}
 
     #section__productos{
         display: grid;
@@ -136,6 +141,7 @@
     border: solid 1px black;
     color: #000000;
     text-align: center;
+    margin-top: 10px;
     border-radius: 0px !important;
 }
 
@@ -154,6 +160,11 @@
     height: 30px;
 }
 
+#div__mostrador{
+    border-radius: 5px;
+}
+
+
 #clickSucess{
    padding: 5px;
    margin-top: 13px;
@@ -169,15 +180,43 @@
 
 .cardIzq{
     display: flex;
+  flex-direction: column;
     align-items: center;
     background-color: #b8b8b8;
     border: solid 1px gainsboro;
     border-radius: 5px;
     color: #000000;
+   font-size: 14px;
+}
+.cardIzq h4{
+    color: black;
+    font-weight: bolder;
+    
+}
+
+.cardIzq__text{
+    display: flex !important;
+    align-items: center;
+    
+}
+
+
+
+.cardIzq img{
+    width: 120px;
    
 }
 
-.cardIzq img{
-    width: 100px;
-   
+.socialIcons{
+    display: flex;
+    margin: 0 auto;
+    gap: 5px;
+    
+    
 }
+
+.socialIcons img{
+width: 20px;
+
+}
+

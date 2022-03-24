@@ -60,14 +60,14 @@ function FormuData(el) {
   let section__prod = document.createElement("div");
   section__prod.className = "card addCard";
 
-  section__prod.innerHTML = `<img src="./img/carrito2.png"><ul><li>Producto: ${products} </li><li>Cantidad:${quantity}</li><li>Precio Total:$${totalPrice}</li></ul>`;
+  section__prod.innerHTML = ` <img src="./img/carrito2.png"><ul><li>Producto: ${products} </li><li>Cantidad:${quantity}</li><li>Precio Total:$${totalPrice}</li></ul>`;
 
 
  /* Crear una card que muestre el producto agregado reciente */
 
  let containerProd = document.getElementById("div__mostrador")
 
- containerProd.innerHTML = `<img src="./img/carrito2.png"><ul><li>Producto: ${products} </li><li>Cantidad:${quantity}</li><li>Precio Total:$${totalPrice}</li></ul><img class="addLogo" src="./img/ProdAdd.png">`
+ containerProd.innerHTML = `<h4>Resúmen</h4> <div class="cardIzq__text"> <img src="./img/carrito2.png"><ul><li>Producto: ${products} </li><li>Cantidad:${quantity}</li><li>Precio Total:$${totalPrice}</li></ul><img class="addLogo" src="./img/ProdAdd.png"><div>`
  containerProd.className = "cardIzq"
 
  
@@ -80,6 +80,7 @@ function FormuData(el) {
   eliminar.className = "btn btn-secondary";
   eliminar.innerText = "Eliminar";
   section__prod.appendChild(eliminar);
+  eliminar.className="btn-danger"
 
   eliminar.addEventListener("click", (event) => {
     Swal.fire({
