@@ -8,6 +8,9 @@ let cfinalButton = document.getElementById("calcButton");
 let botonBuscar = document.getElementById("botonBuscar");
 let inputBuscar = document.getElementById("inputBuscar");
 let divCostoFinal = document.getElementById("div__costoFinal");
+let containerProd = document.getElementById("div__mostrador")
+let prod__filtrado = document.getElementById("prueba")
+
 
 cfinalButton.addEventListener("click", buttonPFinal);
 botonBuscar.addEventListener("click", filtrado);
@@ -65,7 +68,7 @@ function FormuData(el) {
 
  /* Crear una card que muestre el producto agregado reciente */
 
- let containerProd = document.getElementById("div__mostrador")
+ 
 
  containerProd.innerHTML = `<h4>Resúmen</h4> <div class="cardIzq__text"> <img src="./img/carrito2.png"><ul><li>Producto: ${products} </li><li>Cantidad:${quantity}</li><li>Precio Total:$${totalPrice}</li></ul><img class="addLogo" src="./img/ProdAdd.png"><div>`
  containerProd.className = "cardIzq"
@@ -130,8 +133,12 @@ function filtrado() {
   
   let inputDeFiltrado = inputBuscar.value;
   let buscar = productosAgregados.find((i) => i === inputDeFiltrado);
-   console.log(buscar);
-
+  
+  if(buscar == "" || buscar == undefined){
+   prod__filtrado.innerHTML = `<h5>Tu producto NO fue encontrado <h5> <ul>Producto = ${buscar}</ul>`
+  }else{
+  prod__filtrado.innerHTML = `<h5>Tu producto Fue encontrado <h5> <ul>Producto = ${buscar}</ul>`
+}
 }
 
 
@@ -142,6 +149,8 @@ function deleteAll() {
   DeleteAllBtn.innerText = "Borrar Todo";
   priceFinalSection.appendChild(DeleteAllBtn);
   DeleteAllBtn.addEventListener("click", borrarTodo);
+
+
   function borrarTodo() { 
    
    
@@ -154,6 +163,8 @@ function deleteAll() {
         precioFinal = 0;
         costos = [];
         productosAgregados = [];
+
+        containerProd.innerHTML = ""
       }
  
     divCostoFinal.innerHTML = `<p>Costo total: $${precioFinal}</p>`;

@@ -44,9 +44,10 @@
 .addCard{
     width: 200px;
     color:#000000;
-    font-weight: bolder;
+   
     border: solid 2px rgb(0, 0, 0) !important;
     border-bottom: none !important;
+    
 }
 
 .addCard ul{
@@ -65,6 +66,7 @@
 .btn{
    /*background-color: #474736 !important;*/
    background-color: rgb(86, 153, 253) !important;
+   font-family: "Heebo" !important;
 }
 
     #section__productos{
@@ -112,17 +114,20 @@
     border-radius: 5px;   
     color: #000000;
     margin-left: 60px;
-    background-color: #b8b8b8;
+    background: rgb(154,154,154);
+    background: linear-gradient(90deg, rgba(154,154,154,1) 0%, rgba(173,173,173,1) 35%, rgba(175,172,172,1) 65%, rgba(194,179,179,1) 100%);
 }
 
 #formProds input{
     border-radius: 3px;
     border: 1px #2c2c2b solid;
     background-color: #EEEEEE;
+    border-top: 0;
+    border-left: 0;
 }
 
 .form__section{
-   
+    
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -154,6 +159,7 @@
     height: 30px;
     border-radius: 5px;
     border-top: 0px;
+    border-left: 0px;
 }
 .div__buscador button{
     margin-left:-15px;
@@ -162,6 +168,8 @@
 
 #div__mostrador{
     border-radius: 5px;
+    background: rgb(154,154,154);
+    background: linear-gradient(90deg, rgba(154,154,154,1) 0%, rgba(173,173,173,1) 35%, rgba(175,172,172,1) 65%, rgba(194,179,179,1) 100%);
 }
 
 
@@ -182,7 +190,8 @@
     display: flex;
   flex-direction: column;
     align-items: center;
-    background-color: #b8b8b8;
+    background: rgb(154,154,154);
+    background: linear-gradient(90deg, rgba(154,154,154,1) 0%, rgba(173,173,173,1) 35%, rgba(175,172,172,1) 65%, rgba(194,179,179,1) 100%);
     border: solid 1px gainsboro;
     border-radius: 5px;
     color: #000000;
