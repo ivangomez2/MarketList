@@ -5,7 +5,7 @@
 
 
 
-@media (max-width:870px){
+@media (max-width:970px){
     
     }
 
@@ -39,6 +39,7 @@
  .main__forms{
  display: grid;
  grid-template-columns: 1fr 1fr;
+ 
 }
 
 .addCard{
@@ -74,7 +75,7 @@
         gap: 8px;
         grid-template-columns: 1fr 1fr 1fr;
         margin-top: 100px;
-       
+       margin-left: 20px;
     }
     #div__mostrador{
         border: solid 2px black;
@@ -99,10 +100,31 @@
 }
 
 #priceFinal{
+
     display: flex;
     flex-direction: column;
 }
 
+.sucessIcon{
+    margin-left: 80px;
+    margin-top: 30px;
+    width: 60px;
+    margin-bottom: 20px;
+    
+}
+
+.card__filtrado{
+    width:240px;
+    margin-top: 30px;
+    border: solid 2px black;
+    border-radius: 5px;
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 1fr;
+    align-items: center;
+   
+    
+}
 
 
 #formProds{
@@ -155,6 +177,7 @@
     border-radius: 0px !important;
 }
 
+
 .div__buscador input{
     height: 30px;
     border-radius: 5px;
@@ -181,9 +204,10 @@
 }
 
 .buscador{
-    display: grid;
-    grid-template-columns: 1fr  1fr;
-    margin-top: 90px;
+   display: flex;
+   flex-direction: column;
+   margin-top: 95px;
+   margin-left: 30px;
 }
 
 .cardIzq{
@@ -229,3 +253,8 @@ width: 20px;
 
 }
 
+
+
+#sticky-footer{
+    margin-top: 50px;
+}

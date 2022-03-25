@@ -9,8 +9,10 @@ let botonBuscar = document.getElementById("botonBuscar");
 let inputBuscar = document.getElementById("inputBuscar");
 let divCostoFinal = document.getElementById("div__costoFinal");
 let containerProd = document.getElementById("div__mostrador")
-let prod__filtrado = document.getElementById("prueba")
-
+let buscador = document.querySelector(".buscador")
+  
+let prod__filtrado = document.createElement("div")
+prod__filtrado.className = "card__filtrado"
 
 cfinalButton.addEventListener("click", buttonPFinal);
 botonBuscar.addEventListener("click", filtrado);
@@ -70,7 +72,7 @@ function FormuData(el) {
 
  
 
- containerProd.innerHTML = `<h4>Resúmen</h4> <div class="cardIzq__text"> <img src="./img/carrito2.png"><ul><li>Producto: ${products} </li><li>Cantidad:${quantity}</li><li>Precio Total:$${totalPrice}</li></ul><img class="addLogo" src="./img/ProdAdd.png"><div>`
+ containerProd.innerHTML = `<h4>Resúmen</h4> <div class="cardIzq__text"> <img src="./img/carrito2.png"><ul><li>Producto: ${products} </li><li>Cantidad:${quantity}</li><li>Precio<span style="color:green"> Total:$${totalPrice}</span></li></ul><img class="addLogo" src="./img/ProdAdd.png"><div>`
  containerProd.className = "cardIzq"
 
  
@@ -130,14 +132,18 @@ function FormuData(el) {
 }
 
 function filtrado() {
-  
+
+
   let inputDeFiltrado = inputBuscar.value;
   let buscar = productosAgregados.find((i) => i === inputDeFiltrado);
   
-  if(buscar == "" || buscar == undefined){
-   prod__filtrado.innerHTML = `<h5>Tu producto NO fue encontrado <h5> <ul>Producto = ${buscar}</ul>`
+  if(buscar == " " || buscar == undefined){
+    
+   prod__filtrado.innerHTML = `<img class="sucessIcon"src="./img/errorIcon.png" <h5>Tu producto NO se encuentra en <span style="color:red"> STOCK </span> <h5>`
+   buscador.appendChild(prod__filtrado)
   }else{
-  prod__filtrado.innerHTML = `<h5>Tu producto Fue encontrado <h5> <ul>Producto = ${buscar}</ul>`
+  prod__filtrado.innerHTML = `<img class="sucessIcon" src="./img/sucessIcon.webp"> <h5>Tu producto se encuentra en <strong> <span style="color:green"> STOCK </span> </strong><h5> <p> <strong>Producto = ${buscar}</strong></ul>`
+  buscador.appendChild(prod__filtrado)
 }
 }
 
