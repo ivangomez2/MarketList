@@ -63,7 +63,7 @@ function FormuData(el) {
   /* Crear cards con productos */
  
   let section__prod = document.createElement("div");
-  section__prod.className = "card addCard";
+  section__prod.className = "card addCard ";
 
   section__prod.innerHTML = ` <img src="./img/carrito2.png"><ul><li>Producto: ${products} </li><li>Cantidad:${quantity}</li><li>Precio Total:$${totalPrice}</li></ul>`;
 

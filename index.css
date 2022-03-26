@@ -1,17 +1,51 @@
-*{
-    font-weight: bolder;
-    font-family: monospace;
-}
 
 
 
-@media (max-width:970px){
-    
+
+@media (max-width:1030px){
+    .main__forms{
+        display: grid;
+        grid-template-columns: 1fr !important;
+        
+       }
+       .buscador{
+           position: absolute;
+           left:490px;
+           margin-top: 249px !important;
+          
+    }
+
+ 
+   #div__mostrador{
+        margin-top: 118px !important;
     }
 
 
-@media (max-width:650px){
-   
+    }
+
+
+@media (max-width:750px){
+    .buscador{
+        position: absolute;
+        left:400px;
+        margin-top: 249px !important;
+       
+ }
+
+
+.form__section input{
+    margin-bottom: 10px;
+   border-radius: 3px;
+   border-color: rgb(187, 187, 187);
+   background-color: rgb(211, 191, 191);
+   width: 160px;
+}
+
+
+ .search__input input{
+     width: 170px;
+     background-color: rgba(248, 249, 252, 0.452);
+ }
     }
 
 
@@ -21,8 +55,18 @@
     }
 
     
+    *{
+        box-sizing: border-box;
+    }
 
+body{
+    background-image: url("./img/mark.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 
+    
+}
 
 .nav__ul{
     display: flex;
@@ -44,6 +88,7 @@
 
 .addCard{
     width: 200px;
+    height: 303px;
     color:#000000;
    
     border: solid 2px rgb(0, 0, 0) !important;
@@ -75,13 +120,13 @@
         gap: 8px;
         grid-template-columns: 1fr 1fr 1fr;
         margin-top: 100px;
-       margin-left: 20px;
+       
     }
     #div__mostrador{
         border: solid 2px black;
         height: 205px;
         width: 350px;
-        
+        margin-left: 40px;
     }
 
     .addLogo{
@@ -103,6 +148,10 @@
 
     display: flex;
     flex-direction: column;
+    border: solid 2px;
+    border-left: none;
+    border-radius: 5px;
+    background-color: #31313146;
 }
 
 .sucessIcon{
@@ -120,9 +169,11 @@
     border-radius: 5px;
     display: grid;
     padding: 10px;
+    color: black;
+    font-weight: bold;
     grid-template-columns: 1fr;
     align-items: center;
-   
+    background-color: rgba(97, 97, 97, 0.397);
     
 }
 
@@ -134,16 +185,18 @@
     border: solid 2px rgb(8, 8, 8);
     padding: 20px;
     border-radius: 5px;   
+    border-right: none;
     color: #000000;
     margin-left: 60px;
-    background: rgb(154,154,154);
-    background: linear-gradient(90deg, rgba(154,154,154,1) 0%, rgba(173,173,173,1) 35%, rgba(175,172,172,1) 65%, rgba(194,179,179,1) 100%);
+    font-family: 'Merriweather', serif !important;
+    background-color: rgba(97, 97, 97, 0.397);
+ 
 }
 
 #formProds input{
     border-radius: 3px;
     border: 1px #2c2c2b solid;
-    background-color: #EEEEEE;
+    background-color: rgba(97, 97, 97, 0.644);
     border-top: 0;
     border-left: 0;
 }
@@ -163,37 +216,48 @@
 }
 
 
+
 #div__costoFinal{
-    background-color: #EEEEEE;
+    background-color: rgba(97, 97, 97, 0.397) ;
     border: solid 1px black;
+    border-right: none;
     color: #000000;
     text-align: center;
     margin-top: 10px;
-    border-radius: 0px !important;
+    border-radius: 5px !important;
+}
+
+#calcButton{
+    margin-top: 20px;
+    background-color: #58aeff9c !important;
 }
 
 #div__costoFinal button{
-    
+
     border-radius: 0px !important;
 }
 
 
+
 .div__buscador input{
-    height: 30px;
+    height: 27px;
     border-radius: 5px;
     border-top: 0px;
     border-left: 0px;
 }
 .div__buscador button{
     margin-left:-15px;
-    height: 30px;
+    margin-bottom: 5px;
+    height: 28px;
 }
 
 #div__mostrador{
     border-radius: 5px;
-    background: rgb(154,154,154);
+    background-color: rgba(97, 97, 97, 0.397) ;
+    /*background: rgb(154,154,154);
     background: linear-gradient(90deg, rgba(154,154,154,1) 0%, rgba(173,173,173,1) 35%, rgba(175,172,172,1) 65%, rgba(194,179,179,1) 100%);
-}
+ */
+ }
 
 
 #clickSucess{
@@ -204,18 +268,21 @@
 }
 
 .buscador{
-   display: flex;
-   flex-direction: column;
-   margin-top: 95px;
-   margin-left: 30px;
+  margin: 0 auto;
+  margin-top: 40px;
 }
 
+
+.search__input input{
+    background-color: rgba(248, 249, 252, 0.452);
+}
+
+.search__input ::placeholder { color: rgb(0, 0, 0); }
 .cardIzq{
     display: flex;
   flex-direction: column;
     align-items: center;
-    background: rgb(154,154,154);
-    background: linear-gradient(90deg, rgba(154,154,154,1) 0%, rgba(173,173,173,1) 35%, rgba(175,172,172,1) 65%, rgba(194,179,179,1) 100%);
+    background-color: rgba(97, 97, 97, 0.397) ;
     border: solid 1px gainsboro;
     border-radius: 5px;
     color: #000000;
