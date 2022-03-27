@@ -50,10 +50,54 @@
 
 
 
-@media (max-width:439px){
-   
+@media (max-width:647px){
+    #section__productos{
+        display: grid;
+        gap: 8px;
+        grid-template-columns:1fr 1fr !important;
+        margin-top: 100px;
+       margin-left: 20px;
+    }
+    .buscador{
+        position: relative;
+        left: 0px !important;
+        margin-top: 15px !important;
+       
+ }
+
+ .cardIzq{
+     margin: 0 auto !important;
+    
+}
+#formProds{
+    display: flex !important;
+    flex-direction: column !important;
+}
+       
+
+#calcButton{
+    margin-top: 40px !important;
+}
+
+#div__costoFinal{
+    margin-top: 100px !important;
+}
+ }
+
+
+ @media (max-width:457px){
+    .form__section{
+   margin-left: -56px !important;
     }
 
+    
+    #section__productos{
+        margin: 0 auto;
+        grid-template-columns:1fr !important;
+    
+    }
+
+ }
     
     *{
         box-sizing: border-box;
@@ -88,16 +132,18 @@ body{
 
 .addCard{
     width: 200px;
-    height: 303px;
+    height: 304px;
     color:#000000;
-   
+    background-color: rgba(97, 97, 97, 0.63) !important ; 
     border: solid 2px rgb(0, 0, 0) !important;
     border-bottom: none !important;
-    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 15px !important;
 }
 
 .addCard ul{
     border-top: 2px solid black;
+  
 }
 
 .addCard img{
@@ -109,9 +155,14 @@ body{
     
 }
 
+.addCard button{
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+}
+
 .btn{
    /*background-color: #474736 !important;*/
-   background-color: rgb(86, 153, 253) !important;
+   background-color: rgba(86, 153, 253, 0.747) !important;
    font-family: "Heebo" !important;
 }
 
@@ -202,10 +253,8 @@ body{
 }
 
 .form__section{
-    
     display: flex;
-    justify-content: center;
-    justify-items: center;
+ margin: 0 auto;
 }
 
 .form__section input{
@@ -225,6 +274,7 @@ body{
     text-align: center;
     margin-top: 10px;
     border-radius: 5px !important;
+    font-weight: bold;
 }
 
 #calcButton{
@@ -278,32 +328,40 @@ body{
 }
 
 .search__input ::placeholder { color: rgb(0, 0, 0); }
+
 .cardIzq{
     display: flex;
   flex-direction: column;
     align-items: center;
-    background-color: rgba(97, 97, 97, 0.397) ;
+    background-color: rgba(97, 97, 97, 0.623) ;
     border: solid 1px gainsboro;
     border-radius: 5px;
     color: #000000;
-   font-size: 14px;
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 .cardIzq h4{
     color: black;
     font-weight: bolder;
+    border-bottom: solid 2px;
+    width: 350px;
+    text-align: center;
     
+}
+
+
+.cardIzq ul{
+    margin-left:5px;
 }
 
 .cardIzq__text{
     display: flex !important;
     align-items: center;
-    
 }
-
-
 
 .cardIzq img{
     width: 120px;
+  
    
 }
 

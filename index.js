@@ -72,7 +72,7 @@ function FormuData(el) {
 
  
 
- containerProd.innerHTML = `<h4>Resúmen</h4> <div class="cardIzq__text"> <img src="./img/carrito2.png"><ul><li>Producto: ${products} </li><li>Cantidad:${quantity}</li><li>Precio<span style="color:green"> Total:$${totalPrice}</span></li></ul><img class="addLogo" src="./img/ProdAdd.png"><div>`
+ containerProd.innerHTML = `<h4>Resúmen</h4> <div class="cardIzq__text"> <img src="./img/carrito2.png"><ul><li>Producto:<span style="color:white"> ${products}</span></li><li>Cantidad:${quantity}</li><li>Precio<span style="color:green"> Total:$${totalPrice}</span></li></ul><img class="addLogo" src="./img/ProdAdd.png"><div>`
  containerProd.className = "cardIzq"
 
  
