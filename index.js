@@ -60,13 +60,36 @@ function FormuData(el) {
   let filtrado = prodNew.name;
   productosAgregados.push(filtrado);
   
-  /* Crear cards con productos */
+  const MLpromise = fetch(
+    "https://api.mercadolibre.com/sites/MLA/search?q=" + products
+  )
+    .then((promise) => {
+      
+      return promise.json();
+    })
+    .then((json) => {
+     let img = json.results[0].thumbnail
+     console.log(json)
+     return img
+    })
+    let section__prod = document.createElement("div");
+   MLpromise.then((img) =>{
+     console.log(img)
  
-  let section__prod = document.createElement("div");
+    section__prod.className = "card addCard ";
+
+    section__prod.innerHTML = ` <img class="img-promise"src=${img}><ul><li>Producto: ${products} </li><li>Cantidad:${quantity}</li><li>Precio Total:$${totalPrice}</li></ul>`;
+    })
+
+   
+ 
+
+  /* Crear cards con productos */
+  
+  
   section__prod.className = "card addCard ";
 
-  section__prod.innerHTML = ` <img src="./img/carrito2.png"><ul><li>Producto: ${products} </li><li>Cantidad:${quantity}</li><li>Precio Total:$${totalPrice}</li></ul>`;
-
+  section__prod.innerHTML = ` <img class="img-promise" src="${MLpromise}"><ul><li>Producto: ${products} </li><li>Cantidad:${quantity}</li><li>Precio Total:$${totalPrice}</li></ul>`;
 
  /* Crear una card que muestre el producto agregado reciente */
 
@@ -75,7 +98,7 @@ function FormuData(el) {
  containerProd.innerHTML = `<h4>Resúmen</h4> <div class="cardIzq__text"> <img src="./img/carrito2.png"><ul><li>Producto:<span style="color:white"> ${products}</span></li><li>Cantidad:${quantity}</li><li>Precio<span style="color:green"> Total:$${totalPrice}</span></li></ul><img class="addLogo" src="./img/ProdAdd.png"><div>`
  containerProd.className = "cardIzq"
 
- 
+  
 
 
 

@@ -134,9 +134,10 @@ body{
     width: 200px;
     height: 304px;
     color:#000000;
-    background-color: rgba(97, 97, 97, 0.63) !important ; 
+    background-color: rgba(255, 255, 255, 0.692) !important ; 
     border: solid 2px rgb(0, 0, 0) !important;
     border-bottom: none !important;
+    justify-content: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border-radius: 15px !important;
 }
@@ -203,6 +204,7 @@ body{
     border-left: none;
     border-radius: 5px;
     background-color: #31313146;
+    background-color: rgba(97, 97, 97, 0.726);
 }
 
 .sucessIcon{
@@ -240,7 +242,7 @@ body{
     color: #000000;
     margin-left: 60px;
     font-family: 'Merriweather', serif !important;
-    background-color: rgba(97, 97, 97, 0.397);
+    background-color: rgba(97, 97, 97, 0.726);
  
 }
 
@@ -317,6 +319,13 @@ body{
     
 }
 
+.img-promise{
+    border:solid 1px;
+    border-radius: 10px !important;
+    width: 180px !important;
+    height: 180px !important;
+}
+
 .buscador{
   margin: 0 auto;
   margin-top: 40px;
@@ -333,7 +342,7 @@ body{
     display: flex;
   flex-direction: column;
     align-items: center;
-    background-color: rgba(97, 97, 97, 0.623) ;
+    background-color: rgba(97, 97, 97, 0.849) !important ;
     border: solid 1px gainsboro;
     border-radius: 5px;
     color: #000000;
