@@ -130,6 +130,11 @@ body{
  
 }
 
+
+#delete{
+    background-color: red !important;
+}
+
 .addCard{
     width: 200px;
     height: 304px;

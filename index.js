@@ -10,7 +10,7 @@ let inputBuscar = document.getElementById("inputBuscar");
 let divCostoFinal = document.getElementById("div__costoFinal");
 let containerProd = document.getElementById("div__mostrador")
 let buscador = document.querySelector(".buscador")
-  
+
 let prod__filtrado = document.createElement("div")
 prod__filtrado.className = "card__filtrado"
 
@@ -23,6 +23,8 @@ let productosAgregados = [];
 let costos = [];
 let precioFinal = 0;
 arrayNew = [];
+
+
 
 
 class Productos {
@@ -76,20 +78,47 @@ function FormuData(el) {
    MLpromise.then((img) =>{
      console.log(img)
  
+  /* Crear cards con productos */
     section__prod.className = "card addCard ";
 
-    section__prod.innerHTML = ` <img class="img-promise"src=${img}><ul><li>Producto: ${products} </li><li>Cantidad:${quantity}</li><li>Precio Total:$${totalPrice}</li></ul>`;
-    })
-
-   
- 
-
-  /* Crear cards con productos */
+    section__prod.innerHTML = ` <img class="img-promise" src=${img}><ul><li>Producto: ${products} </li><li>Cantidad:${quantity}</li><li>Precio Total:$${totalPrice}</li></ul><button class="btn btn-danger" id="delete">Eliminar</button>`;
+    let borrar = document.getElementById("delete");
+    borrar.addEventListener("click", (event) => {
+      Swal.fire({
+        icon:'warning',
+        title: 'Estas seguro?',
+        showDenyButton: true,
+        confirmButtonText: 'Si',
+        denyButtonText: `No`,
+      }).then((result) => {
+       
+        if (result.isConfirmed) {
+          
+          let ver = event.target.parentNode.remove();
+          Toastify({
+            text: "Producto Eliminado",
+            style: {
+              background: "green",
+            },
+            offset: {
+              x: 10,
+              y: 530, 
+            },
+          }).showToast();
+          console.log(ver);
+          prodsDelete.push(totalPrice);
+          console.log(prodsDelete);
+          arrayNew = [];
+          productosAgregados = []
+        } else if (result.isDenied) {
+          Swal.fire('Operación cancelada', '', 'error')
+        }
+      })
+    });
   
-  
-  section__prod.className = "card addCard ";
+  })
 
-  section__prod.innerHTML = ` <img class="img-promise" src="${MLpromise}"><ul><li>Producto: ${products} </li><li>Cantidad:${quantity}</li><li>Precio Total:$${totalPrice}</li></ul>`;
+  
 
  /* Crear una card que muestre el producto agregado reciente */
 
@@ -104,44 +133,6 @@ function FormuData(el) {
 
   /*funcion para eliminar cada elemento de mi tabla*/
 
-  let eliminar = document.createElement("button");
-  eliminar.className = "btn btn-secondary";
-  eliminar.innerText = "Eliminar";
-  section__prod.appendChild(eliminar);
-  eliminar.className="btn-danger"
-
-  eliminar.addEventListener("click", (event) => {
-    Swal.fire({
-      icon:'warning',
-      title: 'Estas seguro?',
-      showDenyButton: true,
-      confirmButtonText: 'Si',
-      denyButtonText: `No`,
-    }).then((result) => {
-     
-      if (result.isConfirmed) {
-        
-        let ver = event.target.parentNode.remove();
-        Toastify({
-          text: "Producto Eliminado",
-          style: {
-            background: "green",
-          },
-          offset: {
-            x: 10,
-            y: 530, 
-          },
-        }).showToast();
-        console.log(ver);
-        prodsDelete.push(totalPrice);
-        console.log(prodsDelete);
-        arrayNew = [];
-        productosAgregados = []
-      } else if (result.isDenied) {
-        Swal.fire('Operación cancelada', '', 'error')
-      }
-    })
-  });
 
   /*calcular precio total*/
   console.log(costos.push(totalPrice));
