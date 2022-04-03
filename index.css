@@ -1,5 +1,7 @@
 
-
+::placeholder{
+    color: rgba(0, 0, 0, 0.39);
+}
 
 
 @media (max-width:1030px){
