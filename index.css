@@ -65,9 +65,14 @@
        
  }
 
- .cardIzq{
-     margin: 0 auto !important;
+ .showProduct{
+     margin-top: 100px;
+     margin-left: 40px;
+ }
+
+#div__mostrador{
     
+    margin: 0 auto !important;
 }
 #formProds{
     display: flex !important;
@@ -87,7 +92,7 @@
 
  @media (max-width:457px){
     .form__section{
-   margin-left: -56px !important;
+   margin-left: -40px !important;
     }
 
     
@@ -301,11 +306,17 @@ body{
     border-radius: 5px;
     border-top: 0px;
     border-left: 0px;
+  
 }
 .div__buscador button{
+   
     margin-left:-15px;
     margin-bottom: 5px;
-    height: 28px;
+    height: 27px;
+    background-color: rgb(96, 133, 236) !important;
+    text-align: center !important;
+   
+   
 }
 
 #div__mostrador{
@@ -395,5 +406,5 @@ width: 20px;
 
 
 #sticky-footer{
-    margin-top: 50px;
+    margin-top: 20%;
 }
