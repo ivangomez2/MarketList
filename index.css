@@ -93,6 +93,11 @@
 
 
  @media (max-width:457px){
+    .addCard{
+        width: 194px !important;
+        
+    }
+   
     .form__section{
    margin-left: -40px !important;
     }
@@ -103,7 +108,7 @@
     
     #section__productos{
         margin: 0 auto;
-        grid-template-columns:1fr !important;
+        grid-template-columns:1fr 1fr!important;
     
     }
 
@@ -149,12 +154,13 @@ body{
     width: 200px;
     height: 304px;
     color:#000000;
-    background-color: rgba(255, 255, 255, 0.692) !important ; 
+    background-color: rgba(117, 115, 115, 0.747) !important ; 
     border: solid 2px rgb(0, 0, 0) !important;
     border-bottom: none !important;
     justify-content: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border-radius: 15px !important;
+    margin-top: 20px;
 }
 
 .addCard ul{
