@@ -96,7 +96,10 @@
     .form__section{
    margin-left: -40px !important;
     }
-
+    #div__mostrador{
+    
+       margin-left: -20px !important;
+    }
     
     #section__productos{
         margin: 0 auto;
@@ -189,7 +192,7 @@ body{
     #div__mostrador{
         border: solid 2px black;
         height: 205px;
-        width: 350px;
+        width: 370px;
         margin-left: 40px;
     }
 
